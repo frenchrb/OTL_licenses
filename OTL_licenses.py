@@ -5,15 +5,17 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import csv
 import sys
 import re
 
 def main(input, output):
-    browser = webdriver.Firefox()
-
+    firefox_capabilities = DesiredCapabilities.FIREFOX
+    firefox_capabilities['marionette'] = True
+    browser = webdriver.Firefox(capabilities=firefox_capabilities)    
     outputFile = open(output, 'w')
-    writer = csv.writer(outputFile, doublequote=True, lineterminator='\r')
+    writer = csv.writer(outputFile, doublequote=True, escapechar='\\', lineterminator='\r')
 
     with open(input, 'r') as f:
         reader = csv.reader(f)
@@ -51,7 +53,7 @@ def main(input, output):
                 result.append(field506)
                 writer.writerow(result)
 
-    browser.quit()
+    browser.close()
     outputFile.close()
 
 if __name__ == "__main__":
