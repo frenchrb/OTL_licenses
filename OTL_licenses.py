@@ -23,7 +23,7 @@ def main(input, output):
             result = row
             if 'http' not in row[len(row)-1]:
                 result.append('LICENSE')
-                result.append('506FIELD')
+                result.append('540FIELD')
                 writer.writerow(result)
             else:
                 url = row[len(row)-1]
