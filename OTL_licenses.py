@@ -35,22 +35,22 @@ def main(input, output):
                 result.append(license)
                 
                 if "Attribution-NonCommercial-ShareAlike :: CC BY-NC-SA" in license:
-                    field506 = "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) License.$uhttps://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"
+                    field540 = "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) License.$uhttps://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"
                 elif "Attribution-NonCommercial-NoDerivs :: CC BY-NC-ND" in license:
-                    field506 = "This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs (CC BY-NC-ND) License.$uhttps://creativecommons.org/licenses/by-nc-nd/4.0/legalcode"
+                    field540 = "This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs (CC BY-NC-ND) License.$uhttps://creativecommons.org/licenses/by-nc-nd/4.0/legalcode"
                 elif "Attribution-NonCommercial :: CC BY-NC" in license:
-                    field506 = "This work is licensed under a Creative Commons Attribution-NonCommercial (CC BY-NC) License.$uhttps://creativecommons.org/licenses/by-nc/4.0/legalcode"
+                    field540 = "This work is licensed under a Creative Commons Attribution-NonCommercial (CC BY-NC) License.$uhttps://creativecommons.org/licenses/by-nc/4.0/legalcode"
                 elif "Attribution-NoDerivs :: CC BY-ND" in license:
-                    field506 = "This work is licensed under a Creative Commons Attribution-NoDerivs (CC BY-ND) License.$uhttps://creativecommons.org/licenses/by-nd/4.0/legalcode"
+                    field540 = "This work is licensed under a Creative Commons Attribution-NoDerivs (CC BY-ND) License.$uhttps://creativecommons.org/licenses/by-nd/4.0/legalcode"
                 elif "Attribution-ShareAlike :: CC BY-SA" in license:
-                    field506 = "This work is licensed under a Creative Commons Attribution-ShareAlike (CC BY-SA) License.$uhttps://creativecommons.org/licenses/by-sa/4.0/legalcode"
+                    field540 = "This work is licensed under a Creative Commons Attribution-ShareAlike (CC BY-SA) License.$uhttps://creativecommons.org/licenses/by-sa/4.0/legalcode"
                 elif "Attribution :: CC BY" in license:
-                    field506 = "This work is licensed under a Creative Commons Attribution (CC BY) License.$uhttps://creativecommons.org/licenses/by/4.0/legalcode"
+                    field540 = "This work is licensed under a Creative Commons Attribution (CC BY) License.$uhttps://creativecommons.org/licenses/by/4.0/legalcode"
                 elif "Free Documentation License :: GNU" in license:
-                    field506 = "This work is licensed under a GNU Free Documentation License.$uhttp://www.gnu.org/licenses/fdl.html"
+                    field540 = "This work is licensed under a GNU Free Documentation License.$uhttp://www.gnu.org/licenses/fdl.html"
                 else:
-                    field506 = ""
-                result.append(field506)
+                    field540 = ""
+                result.append(field540)
                 writer.writerow(result)
 
     browser.close()
