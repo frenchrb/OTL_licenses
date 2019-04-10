@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+#tested with geckodriver v0.18; must be added to path
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -46,7 +48,7 @@ def main(input, output):
                     field540 = "This work is licensed under a Creative Commons Attribution-ShareAlike (CC BY-SA) License.$uhttps://creativecommons.org/licenses/by-sa/4.0/legalcode"
                 elif "Attribution :: CC BY" in license:
                     field540 = "This work is licensed under a Creative Commons Attribution (CC BY) License.$uhttps://creativecommons.org/licenses/by/4.0/legalcode"
-                elif "Free Documentation License :: GNU" in license:
+                elif "Free Documentation License :: GNU" in license or "Free Documentation License (GNU)" in license:
                     field540 = "This work is licensed under a GNU Free Documentation License.$uhttp://www.gnu.org/licenses/fdl.html"
                 else:
                     field540 = ""
