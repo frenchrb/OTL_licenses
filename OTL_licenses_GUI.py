@@ -22,7 +22,7 @@ def run():
     root.destroy()
 
 root = Tk()
-root.wm_title("OTL Licenses")
+root.wm_title('OTL Licenses')
 
 inButton = Button(root, text='Select Input File (.csv)...', height=2, width=25, command=open)
 inButton.grid(row=2)
